@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'pastGreen': '#6B8E6E',
+      },
+      fontFamily: {
+        'alumni' : ["Alumni Sans Pinstripe", "sans-serif"],
+        'oswald' : ["Oswald", "sans-serif"],
+      }
+    },
   },
   plugins: [],
 }
