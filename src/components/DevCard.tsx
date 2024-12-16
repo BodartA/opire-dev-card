@@ -10,7 +10,9 @@ const DevCard = () => {
     <div>
       <div className="h-[280px] w-[800px] flex justify-center items-center drop-shadow-2xl hover:scale-110 duration-700">
 
-        <div className={` h-full w-[600px] flex bg-zinc-50 rounded-l-3xl rounded-r-lg py-4 pl-6 pr-14 ${isOnTag ? "-translate-x-5 -skew-x-6 -rotate-6 origin-bottom-right duration-500" : " duration-500"}`}>
+        <div className={` h-full w-[600px] flex bg-zinc-50 rounded-l-3xl rounded-r-lg py-4 pl-6 pr-14 ${isOnTag ? "-translate-x-5 -skew-x-6 -rotate-6 origin-bottom-right duration-500" : " duration-500"} z-10`}>
+          <div className=' self-center relative left-full translate-x-[55px] border-l-2 border-dotted border-zinc-50 w-auto h-[250px] z-10'></div>
+
           <div className=' flex flex-col p-4 size-full bg-pastGreen gap-2'>
             <h2 className=' text-start font-oswald text-lg font-light text-zinc-900 uppercase'>Opire developer stats</h2>
             <div className='grid grid-cols-2 border-dashed border border-zinc-900 justify-center items-center text-center divide-zinc-900 text-zinc-900 p-2 gap-4 uppercase font-bold'>
@@ -24,9 +26,12 @@ const DevCard = () => {
 
         </div>
 
-        <div className=' border-l-2 border-dashed border-zinc-50 w-auto h-[250px]'></div>
+        <div className='w-[2px] h-[250px]'></div>
+
 
         <div onMouseEnter={() => setIsOnTag(true)} onMouseLeave={() => setIsOnTag(false)} className=' flex h-full w-[200px] bg-zinc-50 rounded-r-3xl rounded-l-lg hover:translate-x-5 hover:rotate-[20deg] origin-bottom-left duration-500 hover:skew-x-12'>
+
+          <div className=' self-center relative left-0 -translate-x-[1px] border-l-2 border-dotted border-zinc-50 w-auto h-[250px] z-10'></div>
 
           <div className='flex flex-row p-4 text-zinc-900'>
 
