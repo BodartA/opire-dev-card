@@ -5,28 +5,32 @@ import Barcode from '../assets/Barcode.png'
 const DevCard = () => {
   return (
     <div>
-      <div className='h-[280px] w-[800px] flex justify-center items-center drop-shadow-2xl'>
+      <div className='h-[280px] w-[800px] flex justify-center items-center drop-shadow-2xl hover:skew-y-12 transition-all duration-700'>
 
         <div className=' h-full w-[600px] flex bg-zinc-50 rounded-l-3xl rounded-r-lg py-6 pl-6 pr-14'>
-          <div className=' flex flex-col p-2 size-full bg-pastGreen'>
-            <h2 className=' text-start'>Opire developer stats</h2>
-            <div className='grid grid-cols-2 border-dashed border justify-center items-center text-center divide-x divide-dashed'>
-              <p>Challenge won : 3</p>
+          <div className=' flex flex-col p-4 size-full bg-pastGreen gap-2'>
+            <h2 className=' text-start font-oswald text-lg font-light text-zinc-900 uppercase'>Opire developer stats</h2>
+            <div className='grid grid-cols-2 border-dashed border border-zinc-900 justify-center items-center text-center divide-zinc-900 text-zinc-900 p-2 gap-4 uppercase font-bold'>
+              <p>Issues resolved : 3</p>
               <p>Money earned : 400 $</p>
+              <p>Challenges won : 3</p>
+              <p>Contributed repos : 10</p>
             </div>
+            <h2></h2>
           </div>
 
         </div>
 
+        <div className=''></div>
 
         <div className=' flex h-full w-[200px] bg-zinc-50 rounded-r-3xl rounded-l-lg'>
 
-          <div className='flex flex-row p-4 text-zinc-800'>
+          <div className='flex flex-row p-4 text-zinc-900'>
 
             <div className=' flex flex-col w-1/2 gap-1'>
               <div className='[writing-mode:vertical-rl] flex-1 flex flex-col justify-end overflow-hidden text-ellipsis font-oswald'>
-                <h2 className=' text-pastGreen font-extrabold text-xs line-clamp-2'>Frontend developer OF THE BEEST WORLD Of the wolrd</h2>
-                <h1 className=' text-2xl font-bold line-clamp-2'>Antoine BODART DE ZUMO DE NARANJA</h1>
+                <h2 className=' text-pastGreen tracking-tight font-extrabold text-xs line-clamp-1'>Frontend developer</h2>
+                <h1 className=' tracking-tight text-2xl font-bold line-clamp-2'>Antoine BODART</h1>
               </div>
               <div className='flex justify-start gap-2'>
                 <Twitter size={20} />
@@ -35,8 +39,8 @@ const DevCard = () => {
               </div>
             </div>
 
-            <div className='flex flex-row gap-2'>
-              <div className=' text-center [writing-mode:vertical-lr] font-semibold text-xs font-oswald'>Joined : 02/20/23</div>
+            <div className='flex gap-2'>
+              <div className=' text-center [writing-mode:vertical-lr] font-semibold text-xs font-oswald text-zinc-900'>Joined : 02/20/23</div>
               <div className=' flex justify-center items-start'>
                 <img className=' h-full w-full object-cover' src={Barcode}></img>
               </div>
