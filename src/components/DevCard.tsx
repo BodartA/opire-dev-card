@@ -21,7 +21,13 @@ const DevCard = () => {
               <p>Challenges won : 3</p>
               <p>Contributed repos : 10</p>
             </div>
-            <h2></h2>
+            <h2 className=' font-oswald text-lg tracking-tight font-normal uppercase'>Most used technos</h2>
+            <ul className=' flex flex-1 flex-no-wrap gap-4 items-center overflow-hidden font-oswald font-semibold uppercase text-3xl tracking-tighter text-zinc-900'>
+              <li>Javascript</li>
+              <li>Python</li>
+              <li>Swift</li>
+            </ul>
+
           </div>
 
         </div>
