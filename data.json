@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "name": "Antoine BODART",
+      "role": "Frontend Developer",
+      "registrationDate": "01/11/23",
+      "socialLinks": {
+        "X": "test",
+        "github": "test",
+        "linkedIn": ""
+      },
+      "devStats": {
+        "issuesResoved": "5",
+        "moneyEarned": "400",
+        "challengesWon": "9",
+        "contributedRepos": "10"
+      },
+      "mostUsedTechs": [
+       {"langage": "JavaScript"},
+       {"langage": "Swift"},
+       {"langage": "Python"} 
+      ] 
+    }
+  ]
+}
