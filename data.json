@@ -18,7 +18,8 @@
       "mostUsedTechs": [
         {"langage": "JavaScript"},
         {"langage": "Swift"},
-        {"langage": "Python"}
+        {"langage": "Python"},
+        {"langage": "Ruby"}
       ] 
     }
   ]

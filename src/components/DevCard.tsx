@@ -30,15 +30,15 @@ const DevCard = () => {
 
 
 
-            <div className=' flex-grow flex flex-nowrap'>
-              <ul className=' flex flex-grow min-w-full border flex-shrink-0 items-center justify-start font-oswald font-semibold uppercase text-3xl text-zinc-900 animate-infinite-scroll'>
+            <div className=' flex-grow flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_10px,_black_calc(100%-10px),transparent_100%)]'>
+              <ul className=' flex flex-grow min-w-full flex-shrink-0 items-center justify-start font-oswald font-semibold uppercase text-3xl text-zinc-900 animate-infinite-scroll'>
                 {user.mostUsedTechs.map((data, i) => (
-                  <li className=' flex flex-shrink-0 line-clamp-1 mx-2' key={i}>{data.langage}</li>
+                  <li className=' flex flex-shrink-0 line-clamp-1 mx-2 underline' key={i}>{data.langage}</li>
                 ))}
               </ul>
-              <ul className='flex flex-grow border min-w-full flex-shrink-0 items-center justify-start font-oswald font-semibold uppercase text-3xl text-zinc-900 animate-infinite-scroll' aria-hidden="true">
+              <ul className='flex flex-grow min-w-full flex-shrink-0 items-center justify-start font-oswald font-semibold uppercase text-3xl text-zinc-900 animate-infinite-scroll' aria-hidden="true">
                 {user.mostUsedTechs.map((data, i) => (
-                  <li className=' flex flex-shrink-0 line-clamp-1 mx-2' key={i}>{data.langage}</li>
+                  <li className=' flex flex-shrink-0 line-clamp-1 mx-2 underline' key={i}>{data.langage}</li>
                 ))}
               </ul>
             </div>
