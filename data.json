@@ -5,20 +5,22 @@
       "role": "Frontend Developer",
       "registrationDate": "01/11/23",
       "socialLinks": {
-        "X": "test",
-        "github": "test",
-        "linkedIn": ""
+        "X": "https://x.com/abodart23",
+        "github": "https://github.com/BodartA",
+        "linkedIn": "https://www.linkedin.com/in/antoine-bodart/"
       },
       "devStats": {
         "issuesResoved": "5",
-        "moneyEarned": "400",
+        "moneyEarned": "400 $",
         "challengesWon": "9",
         "contributedRepos": "10"
       },
       "mostUsedTechs": [
        {"langage": "JavaScript"},
        {"langage": "Swift"},
-       {"langage": "Python"} 
+       {"langage": "Python"},
+       {"langage": "Swift"},
+       {"langage": "Python"}
       ] 
     }
   ]

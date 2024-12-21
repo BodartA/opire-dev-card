@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Twitter, Github, Linkedin } from 'lucide-react'
 import Barcode from '../assets/Barcode.png'
+import users from '../../data.json'
 
 const DevCard = () => {
 
   const [isOnTag, setIsOnTag] = useState(false)
+  const user = users?.users[0]
 
   return (
     <div>
@@ -16,16 +18,16 @@ const DevCard = () => {
           <div className=' flex flex-col p-4 size-full bg-pastGreen gap-2'>
             <h2 className=' text-start font-oswald text-lg font-light text-zinc-900 uppercase'>Opire developer stats</h2>
             <div className='grid grid-cols-2 border-dashed border border-zinc-900 justify-center items-center text-center divide-zinc-900 text-zinc-900 p-2 gap-4 uppercase font-bold'>
-              <p>Issues resolved : 3</p>
-              <p>Money earned : 400 $</p>
-              <p>Challenges won : 3</p>
-              <p>Contributed repos : 10</p>
+              <p>Issues resolved : {user.devStats.issuesResoved}</p>
+              <p>Money earned: {user.devStats.moneyEarned}  </p>
+              <p>Challenges won : {user.devStats.challengesWon}</p>
+              <p>Contributed repos : {user.devStats.contributedRepos}</p>
             </div>
             <h2 className=' font-oswald text-lg tracking-tight font-normal uppercase'>Most used technos</h2>
-            <ul className=' flex flex-1 flex-no-wrap gap-4 items-center overflow-hidden font-oswald font-semibold uppercase text-3xl tracking-tighter text-zinc-900'>
-              <li>Javascript</li>
-              <li>Python</li>
-              <li>Swift</li>
+            <ul className=' flex flex-grow items-center gap-2 border-2 line-clamp-1 overflow-auto font-oswald font-semibold uppercase text-3xl text-zinc-900 divide-x-2 divide-zinc-900 scrollbar-hide'>
+              {user.mostUsedTechs.map((data, i) => (
+                <li className='flex pl-2 line-clamp-1 shrink-0' key={i}>{data.langage}</li>
+              ))}
             </ul>
 
           </div>
@@ -34,8 +36,7 @@ const DevCard = () => {
 
         <div className='w-[2px] h-[250px]'></div>
 
-
-        <div onMouseEnter={() => setIsOnTag(true)} onMouseLeave={() => setIsOnTag(false)} className=' flex h-full w-[200px] bg-zinc-50 rounded-r-3xl rounded-l-lg hover:translate-x-5 hover:rotate-[20deg] origin-bottom-left duration-500 hover:skew-x-12'>
+        <a href={user.socialLinks.github} onMouseEnter={() => setIsOnTag(true)} onMouseLeave={() => setIsOnTag(false)} className=' flex h-full w-[200px] bg-zinc-50 rounded-r-3xl rounded-l-lg hover:translate-x-5 hover:rotate-[20deg] origin-bottom-left duration-500 hover:skew-x-12'>
 
           <div className=' self-center relative left-0 -translate-x-[1px] border-l-2 border-dotted border-zinc-50 w-auto h-[250px] z-10'></div>
 
@@ -43,18 +44,18 @@ const DevCard = () => {
 
             <div className=' flex flex-col w-1/2 gap-1'>
               <div className='[writing-mode:vertical-rl] flex-1 flex flex-col justify-end overflow-hidden text-ellipsis font-oswald'>
-                <h2 className=' text-pastGreen tracking-tight font-extrabold text-xs line-clamp-1'>Frontend developer</h2>
-                <h1 className=' tracking-tight text-2xl font-bold line-clamp-2'>Antoine BODART</h1>
+                <h2 className=' text-pastGreen tracking-tight font-extrabold text-xs line-clamp-1'>{user.role}</h2>
+                <h1 className=' tracking-tight text-2xl font-bold line-clamp-2'>{user.name}</h1>
               </div>
               <div className='flex justify-start gap-2'>
-                <Twitter size={20} />
-                <Github size={20} />
-                <Linkedin size={20} />
+                <a href={user.socialLinks.X}><Twitter size={20} /></a>
+                <a href={user.socialLinks.github}><Github size={20} /></a>
+                <a href={user.socialLinks.linkedIn}><Linkedin size={20} /></a>
               </div>
             </div>
 
             <div className='flex gap-2'>
-              <div className=' text-center [writing-mode:vertical-lr] font-semibold text-xs font-oswald text-zinc-900'>Joined : 02/20/23</div>
+              <div className=' text-center [writing-mode:vertical-lr] font-semibold text-xs font-oswald text-zinc-900'>Joined : {user.registrationDate}</div>
               <div className=' flex justify-center items-start'>
                 <img className=' h-full w-full object-cover' src={Barcode}></img>
               </div>
@@ -62,7 +63,7 @@ const DevCard = () => {
             </div>
 
           </div>
-        </div>
+        </a>
 
       </div >
     </div >

@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin')
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -6,6 +8,15 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+      },
+      keyframes: {
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        }
+      },
       colors: {
         'pastGreen': '#6B8E6E',
       },
@@ -15,6 +26,23 @@ export default {
       }
     },
   },
-  plugins: [],
-}
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        '.scrollbar-hide': {
+          /* IE and Edge */
+          '-ms-overflow-style': 'none',
 
+          /* Firefox */
+          'scrollbar-width': 'none',
+
+          /* Safari and Chrome */
+          '&::-webkit-scrollbar': {
+            display: 'none'
+          }
+        }
+      }
+      )
+    })
+  ],
+}
