@@ -24,11 +24,31 @@ const DevCard = () => {
               <p>Contributed repos : {user.devStats.contributedRepos}</p>
             </div>
             <h2 className=' font-oswald text-lg tracking-tight font-normal uppercase'>Most used technos</h2>
-            <ul className=' flex flex-grow items-center gap-2 border-2 line-clamp-1 overflow-auto font-oswald font-semibold uppercase text-3xl text-zinc-900 divide-x-2 divide-zinc-900 scrollbar-hide'>
-              {user.mostUsedTechs.map((data, i) => (
-                <li className='flex pl-2 line-clamp-1 shrink-0' key={i}>{data.langage}</li>
-              ))}
-            </ul>
+
+
+
+
+
+
+            <div className=' flex-grow flex flex-nowrap'>
+              <ul className=' flex flex-grow min-w-full border flex-shrink-0 items-center justify-start font-oswald font-semibold uppercase text-3xl text-zinc-900 animate-infinite-scroll'>
+                {user.mostUsedTechs.map((data, i) => (
+                  <li className=' flex flex-shrink-0 line-clamp-1 mx-2' key={i}>{data.langage}</li>
+                ))}
+              </ul>
+              <ul className='flex flex-grow border min-w-full flex-shrink-0 items-center justify-start font-oswald font-semibold uppercase text-3xl text-zinc-900 animate-infinite-scroll' aria-hidden="true">
+                {user.mostUsedTechs.map((data, i) => (
+                  <li className=' flex flex-shrink-0 line-clamp-1 mx-2' key={i}>{data.langage}</li>
+                ))}
+              </ul>
+            </div>
+
+
+
+
+
+
+
 
           </div>
 

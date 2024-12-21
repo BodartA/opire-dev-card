@@ -16,11 +16,9 @@
         "contributedRepos": "10"
       },
       "mostUsedTechs": [
-       {"langage": "JavaScript"},
-       {"langage": "Swift"},
-       {"langage": "Python"},
-       {"langage": "Swift"},
-       {"langage": "Python"}
+        {"langage": "JavaScript"},
+        {"langage": "Swift"},
+        {"langage": "Python"}
       ] 
     }
   ]
