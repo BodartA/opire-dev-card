@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Twitter, Github, Linkedin } from 'lucide-react'
 import Barcode from '../assets/Barcode.png'
 import users from '../../data.json'
