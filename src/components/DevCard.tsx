@@ -12,7 +12,7 @@ const DevCard = () => {
     <div>
       <div className="h-[280px] w-[800px] flex justify-center items-center drop-shadow-2xl hover:scale-110 duration-700">
 
-        <div className={` h-full w-[600px] flex bg-zinc-50 rounded-l-3xl rounded-r-lg py-4 pl-6 pr-14 ${isOnTag ? "-translate-x-5 -skew-x-6 -rotate-6 origin-bottom-right duration-500" : " duration-500"} z-10`}>
+        <div className={` h-full w-[600px] flex bg-zinc-50 rounded-l-3xl rounded-r-lg py-4 pl-6 pr-14 shadow-leftPart ${isOnTag ? "-translate-x-5 -skew-x-6 -rotate-6 origin-bottom-right duration-500" : " duration-500"} z-10`}>
           <div className=' self-center relative left-full translate-x-[55px] border-l-2 border-dotted border-zinc-50 w-auto h-[250px] z-10'></div>
 
           <div className=' flex flex-col p-4 size-full bg-gradient-to-r from-opireLightGreen to-opireDarkGreen gap-2 shadow-custom rounded-md'>

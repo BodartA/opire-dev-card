@@ -18,7 +18,7 @@ export default {
         }
       },
       boxShadow: {
-        'custom': '0 0 15px 5px rgba(0, 0, 0, 0.4)',
+        'custom': '0 0 15px 5px rgba(0, 0, 0, 0.4)'
       },
       colors: {
         'pastGreen': '#6B8E6E',
