@@ -17,8 +17,13 @@ export default {
           to: { transform: 'translateX(-100%)' },
         }
       },
+      boxShadow: {
+        'custom': '0 0 15px 5px rgba(0, 0, 0, 0.4)',
+      },
       colors: {
         'pastGreen': '#6B8E6E',
+        'opireLightGreen': '#14B28D',
+        'opireDarkGreen': '#119DA7'
       },
       fontFamily: {
         'alumni' : ["Alumni Sans Pinstripe", "sans-serif"],
