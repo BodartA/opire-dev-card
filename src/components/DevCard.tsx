@@ -10,10 +10,11 @@ const DevCard = () => {
 
   return (
     <div>
-      <div className="h-[280px] w-[800px] flex justify-center items-center drop-shadow-2xl hover:scale-110 duration-700">
+      <div className="lg:h-[280px] lg:max-w-[800px] max-w-[600px] h-auto lg:flex lg:flex-row flex flex-col-reverse justify-center items-center drop-shadow-2xl hover:scale-110 lg:duration-700 border-2 border-green-400">
 
-        <div className={` h-full w-[600px] flex bg-zinc-50 rounded-l-3xl rounded-r-lg py-4 pl-6 pr-14 shadow-leftPart ${isOnTag ? "-translate-x-5 -skew-x-6 -rotate-6 origin-bottom-right duration-500" : " duration-500"} z-10`}>
-          <div className=' self-center relative left-full translate-x-[55px] border-l-2 border-dotted border-zinc-50 w-auto h-[250px] z-10'></div>
+        <div className={` lg:h-full lg:w-[600px] max-w-full flex bg-zinc-50 lg:rounded-l-3xl lg:rounded-r-lg px-4 pb-4 pt-6 lg:py-4 lg:pl-6 lg:pr-14 ${isOnTag ? "lg:-translate-x-5 lg:-skew-x-6 lg:-rotate-6 lg:origin-bottom-right lg:duration-500" : " lg:duration-500"} z-10`}>
+
+          <div className=' self-center relative lg:left-full lg:translate-x-[55px] lg:border-l-2 border-dotted border-zinc-50 lg:w-auto lg:h-[250px] z-10'></div>
 
           <div className=' flex flex-col p-4 size-full bg-gradient-to-r from-opireLightGreen to-opireDarkGreen gap-2 shadow-custom rounded-md'>
             <h2 className=' text-start font-oswald text-lg font-light text-zinc-900 uppercase'>Opire developer stats</h2>
@@ -26,12 +27,12 @@ const DevCard = () => {
             <h2 className=' font-oswald text-lg tracking-tight font-normal uppercase'>Most used technos</h2>
 
             <div className=' flex-grow flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_10px,_black_calc(100%-10px),transparent_100%)]'>
-              <ul className=' flex flex-grow min-w-full flex-shrink-0 items-center justify-start font-oswald font-semibold uppercase text-3xl text-zinc-900 animate-infinite-scroll'>
+              <ul className=' flex flex-grow w-full flex-shrink-0 items-center justify-start font-oswald font-semibold uppercase text-3xl text-zinc-900 animate-infinite-scroll'>
                 {user.mostUsedTechs.map((data, i) => (
                   <li className=' flex flex-shrink-0 line-clamp-1 mx-2 underline' key={i}>{data.langage}</li>
                 ))}
               </ul>
-              <ul className='flex flex-grow min-w-full flex-shrink-0 items-center justify-start font-oswald font-semibold uppercase text-3xl text-zinc-900 animate-infinite-scroll' aria-hidden="true">
+              <ul className='flex flex-grow w-full flex-shrink-0 items-center justify-start font-oswald font-semibold uppercase text-3xl text-zinc-900 animate-infinite-scroll' aria-hidden="true">
                 {user.mostUsedTechs.map((data, i) => (
                   <li className=' flex flex-shrink-0 line-clamp-1 mx-2 underline' key={i}>{data.langage}</li>
                 ))}
@@ -41,20 +42,20 @@ const DevCard = () => {
 
         </div>
 
-        <div className='w-[2px] h-[250px]'></div>
+        <div className='lg:w-[2px] lg:h-[250px] h-[2px]'></div>
 
-        <a href={user.socialLinks.github} onMouseEnter={() => setIsOnTag(true)} onMouseLeave={() => setIsOnTag(false)} className=' flex h-full w-[200px] bg-zinc-50 rounded-r-3xl rounded-l-lg hover:translate-x-5 hover:rotate-[20deg] origin-bottom-left duration-500 hover:skew-x-12'>
+        <a href={user.socialLinks.github} onMouseEnter={() => setIsOnTag(true)} onMouseLeave={() => setIsOnTag(false)} className=' lg:flex lg:h-full lg:w-[200px] w-full lg:rotate-0 bg-zinc-50 lg:rounded-r-3xl lg:rounded-l-lg hover:translate-x-5  hover:lg:rotate-[20deg] lg:origin-bottom-left lg:duration-500 hover:lg:skew-x-12'>
 
-          <div className=' self-center relative left-0 -translate-x-[1px] border-l-2 border-dotted border-zinc-50 w-auto h-[250px] z-10'></div>
+          <div className=' lg:self-center lg:relative lg:left-0 lg:-translate-x-[1px] lg:border-l-2 lg:border-dotted lg:border-zinc-50 lg:w-auto lg:h-[250px] z-10'></div>
 
-          <div className='flex flex-row p-4 text-zinc-900'>
+          <div className='lg:flex lg:flex-row p-4 text-zinc-900 flex flex-col-reverse'>
 
-            <div className=' flex flex-col w-1/2 gap-1'>
-              <div className='[writing-mode:vertical-rl] flex-1 flex flex-col justify-end overflow-hidden text-ellipsis font-oswald'>
+            <div className=' lg:flex lg:flex-col lg:w-1/2 gap-1 flex items-center'>
+              <div className='lg:[writing-mode:vertical-rl] flex-1 flex flex-col justify-end overflow-hidden text-ellipsis font-oswald'>
                 <h2 className=' text-opireLightGreen tracking-tight font-extrabold text-xs line-clamp-1'>{user.role}</h2>
                 <h1 className=' tracking-tight text-2xl font-bold line-clamp-2'>{user.name}</h1>
               </div>
-              <div className='flex justify-start gap-2'>
+              <div className='lg:flex lg:flex-row lg:justify-start lg:gap-2 flex flex-col gap-2'>
                 <a href={user.socialLinks.X}><Twitter size={20} /></a>
                 <a href={user.socialLinks.github}><Github size={20} /></a>
                 <a href={user.socialLinks.linkedIn}><Linkedin size={20} /></a>
@@ -62,9 +63,9 @@ const DevCard = () => {
             </div>
 
             <div className='flex gap-2'>
-              <div className=' text-center [writing-mode:vertical-lr] font-semibold text-xs font-oswald text-zinc-900'>Joined : {user.registrationDate}</div>
-              <div className=' flex justify-center items-start'>
-                <img className=' h-full w-full object-cover' src={Barcode}></img>
+              <div className=' text-center lg:[writing-mode:vertical-lr] font-semibold text-xs font-oswald text-zinc-900'>Joined : {user.registrationDate}</div>
+              <div className=' lg:flex lg:justify-center lg:items-start hidden'>
+                <img className='h-full w-full object-cover' src={Barcode}></img>
               </div>
 
             </div>
