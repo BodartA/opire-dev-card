@@ -10,11 +10,11 @@ const DevCard = () => {
 
   return (
     <div>
-      <div className="lg:h-[280px] lg:max-w-[800px] max-w-[600px] h-auto lg:flex lg:flex-row flex flex-col-reverse justify-center items-center drop-shadow-2xl hover:scale-110 lg:duration-700 border-2 border-green-400">
+      <div className="lg:h-[280px] lg:max-w-[800px] max-w-[600px] h-auto lg:flex lg:flex-row flex flex-col-reverse justify-center items-center drop-shadow-2xl hover:lg:scale-110 lg:duration-700">
 
-        <div className={` lg:h-full lg:w-[600px] max-w-full flex bg-zinc-50 lg:rounded-l-3xl lg:rounded-r-lg px-4 pb-4 pt-6 lg:py-4 lg:pl-6 lg:pr-14 ${isOnTag ? "lg:-translate-x-5 lg:-skew-x-6 lg:-rotate-6 lg:origin-bottom-right lg:duration-500" : " lg:duration-500"} z-10`}>
+        <div className={` lg:h-full lg:w-[600px] max-w-full flex bg-zinc-50 rounded-b-3xl rounded-t-lg lg:rounded-l-3xl lg:rounded-r-lg px-4 pb-4 pt-6 lg:py-4 lg:pl-6 lg:pr-14 ${isOnTag ? "lg:-translate-x-5 lg:-skew-x-6 lg:-rotate-6 lg:origin-bottom-right lg:duration-500" : " lg:duration-500"} z-10`}>
 
-          <div className=' self-center relative lg:left-full lg:translate-x-[55px] lg:border-l-2 border-dotted border-zinc-50 lg:w-auto lg:h-[250px] z-10'></div>
+          <div className='lg:self-center lg:relative lg:left-full lg:translate-x-[55px] lg:border-l-2 lg:border-dotted lg:border-zinc-50 lg:w-auto lg:h-[250px] lg:flex hidden z-10'></div>
 
           <div className=' flex flex-col p-4 size-full bg-gradient-to-r from-opireLightGreen to-opireDarkGreen gap-2 shadow-custom rounded-md'>
             <h2 className=' text-start font-oswald text-lg font-light text-zinc-900 uppercase'>Opire developer stats</h2>
@@ -38,15 +38,16 @@ const DevCard = () => {
                 ))}
               </ul>
             </div>
+
           </div>
 
         </div>
 
-        <div className='lg:w-[2px] lg:h-[250px] h-[2px]'></div>
+        <div className='flex lg:w-[2px] lg:h-[250px] h-[2px] w-[570px] border-b-2 border-zinc-50 border-dotted lg:border-none'></div>
 
-        <a href={user.socialLinks.github} onMouseEnter={() => setIsOnTag(true)} onMouseLeave={() => setIsOnTag(false)} className=' lg:flex lg:h-full lg:w-[200px] w-full lg:rotate-0 bg-zinc-50 lg:rounded-r-3xl lg:rounded-l-lg hover:translate-x-5  hover:lg:rotate-[20deg] lg:origin-bottom-left lg:duration-500 hover:lg:skew-x-12'>
+        <a href={user.socialLinks.github} onMouseEnter={() => setIsOnTag(true)} onMouseLeave={() => setIsOnTag(false)} className=' lg:flex lg:h-full lg:w-[200px] w-full lg:rotate-0 bg-zinc-50 rounded-t-3xl rounded-b-lg lg:rounded-r-3xl lg:rounded-l-lg hover:lg:translate-x-5  hover:lg:rotate-[20deg] lg:origin-bottom-left lg:duration-500 hover:lg:skew-x-12'>
 
-          <div className=' lg:self-center lg:relative lg:left-0 lg:-translate-x-[1px] lg:border-l-2 lg:border-dotted lg:border-zinc-50 lg:w-auto lg:h-[250px] z-10'></div>
+          <div className=' lg:self-center lg:relative lg:left-0 lg:-translate-x-[1px] lg:border-l-2 lg:border-dotted lg:border-zinc-50 lg:w-auto lg:h-[250px] lg:flex hidden z-10'></div>
 
           <div className='lg:flex lg:flex-row p-4 text-zinc-900 flex flex-col-reverse'>
 
@@ -67,10 +68,9 @@ const DevCard = () => {
               <div className=' lg:flex lg:justify-center lg:items-start hidden'>
                 <img className='h-full w-full object-cover' src={Barcode}></img>
               </div>
-
             </div>
-
           </div>
+
         </a>
 
       </div >
